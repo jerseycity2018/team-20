@@ -81,7 +81,6 @@ export default class FormPage extends React.Component {
         </Picker>
         <FormLabel> Quantity </FormLabel>{' '}
         <FormInput
-          // style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
           onChangeText={quantity =>
             this.setState({
               quantity,
