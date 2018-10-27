@@ -1,142 +1,142 @@
 [
  {
    "email": "madanm@me.com",
-   "socialAction": "recycle",
-   "development": "ADAMS",
+   "actionType": "recycle",
+   "development": "Adams",
    "quantity": 1,
-   "picture": "picture1.jpg"
+   "picture": "https://www.thegivingdaysfoundation.org/wp-content/uploads/2016/02/people-recycling.jpg"
  },
  {
    "email": "burniske@gmail.com",
-   "socialAction": "recycle",
-   "development": "AMSTERDAM",
+   "actionType": "recycle",
+   "development": "Amsterdam",
    "quantity": 2,
-   "picture": "picture2.jpg"
+   "picture": "https://www.incimages.com/uploaded_files/image/970x450/getty_163252210_121477.jpg"
  },
  {
    "email": "preneel@sbcglobal.net",
-   "socialAction": "recycle",
-   "development": "AUDUBON",
+   "actionType": "recycle",
+   "development": "Audubon",
    "quantity": 65,
-   "picture": "picture3.jpg"
+   "picture": ""
  },
  {
    "email": "offthelip@msn.com",
-   "socialAction": "recycle",
-   "development": "ALBANY",
+   "actionType": "recycle",
+   "development": "Albany",
    "quantity": 8,
-   "picture": "picture4.jpg"
+   "picture": "https://www.straitstimes.com/sites/default/files/styles/x_large/public/articles/2015/05/15/ST_20150515_SBRECYCLE15_1320193e_2x.jpg?itok=SfZFVOGE"
  },
  {
    "email": "dawnsong@yahoo.com",
-   "socialAction": "recycle",
-   "development": "ALBANY II",
+   "actionType": "recycle",
+   "development": "Albany II",
    "quantity": 100,
-   "picture": "picture5.jpg"
+   "picture": ""
  },
  {
    "email": "liedra@msn.com",
-   "socialAction": "recycle",
-   "development": "ALLEN STREET",
+   "actionType": "recycle",
+   "development": "Allen Street",
    "quantity": 24,
-   "picture": "picture6.jpg"
+   "picture": ""
  },
  {
    "email": "rbarreira@gmail.com",
-   "socialAction": "volunteer",
-   "development": "AMSTRONG II",
+   "actionType": "volunteer",
+   "development": "Armstrong II",
    "quantity": 54,
-   "picture": "picture7.jpg"
+   "picture": "http://www.greencityforce.org/wp-content/uploads/2014/08/GCF_10.18.14-18-of-52.jpg"
  },
  {
    "email": "ccohen@icloud.com",
-   "socialAction": "volunteer",
-   "development": "AMSTERDAM ADDITION",
+   "actionType": "volunteer",
+   "development": "Amsterdan Addition",
    "quantity": 67,
-   "picture": "picture8.jpg"
+   "picture": "https://www.snf.org/media/3258364/GCF2_Responsive.jpg"
  },
  {
    "email": "pereinar@gmail.com",
-   "socialAction": "volunteer",
-   "development": "ARMSTRONG I",
+   "actionType": "volunteer",
+   "development": "Armstrong I",
    "quantity": 43,
-   "picture": "picture9.jpg"
+   "picture": "https://c1.staticflickr.com/5/4302/36124653432_1830438b87_b.jpg"
  },
  {
    "email": "grinder@comcast.net",
-   "socialAction": "volunteer",
-   "development": "ASTORIA",
+   "actionType": "volunteer",
+   "development": "Astoria",
    "quantity": 21,
-   "picture": "picture10.jpg"
+   "picture": ""
  },
  {
    "email": "grolschie@me.com",
-   "socialAction": "volunteer",
-   "development": "BARUCH",
+   "actionType": "volunteer",
+   "development": "Baruch",
    "quantity": 54,
-   "picture": "picture11.jpg"
+   "picture": ""
  },
  {
    "email": "giafly@outlook.com",
-   "socialAction": "volunteer",
-   "development": "BAY VIEW",
+   "actionType": "volunteer",
+   "development": "Bay View",
    "quantity": 79,
-   "picture": "picture12.jpg"
+   "picture": ""
  },
  {
    "email": "speeves@verizon.net",
-   "socialAction": "volunteer",
-   "development": "BAYCHESTER",
+   "actionType": "volunteer",
+   "development": "Baychester",
    "quantity": 909,
-   "picture": "picture13.jpg"
+   "picture": ""
  },
  {
    "email": "slaff@live.com",
-   "socialAction": "volunteer",
-   "development": "FOREST",
+   "actionType": "volunteer",
+   "development": "Forest",
    "quantity": 97,
-   "picture": "picture14.jpg"
+   "picture": "http://www.greencityforce.org/wp-content/uploads/2010/06/IMG_09501.jpg"
  },
  {
    "email": "pajas@outlook.com",
-   "socialAction": "compost",
-   "development": "ASTORIA",
+   "actionType": "compost",
+   "development": "Astoria",
    "quantity": 62,
-   "picture": "picture15.jpg"
+   "picture": "http://www.greencityforce.org/wp-content/uploads/2010/06/IMG_09501.jpg"
  },
  {
    "email": "scato@sbcglobal.net",
-   "socialAction": "compost",
-   "development": "HOPE GARDENS",
+   "actionType": "compost",
+   "development": "Hope Gardens",
    "quantity": 34,
-   "picture": "picture16.jpg"
+   "picture": ""
  },
  {
    "email": "gerlo@live.com",
-   "socialAction": "compost",
-   "development": "INGERSOLL",
+   "actionType": "compost",
+   "development": "Ingersoll",
    "quantity": 1,
-   "picture": "picture17.jpg"
+   "picture": ""
  },
  {
    "email": "roamer@icloud.com",
-   "socialAction": "compost",
-   "development": "JACKSON",
+   "actionType": "compost",
+   "development": "Jackson",
    "quantity": 2,
-   "picture": "picture18.jpg"
+   "picture": ""
  },
  {
    "email": "lukka@comcast.net",
-   "socialAction": "compost",
-   "development": "JEFFERSON",
+   "actionType": "compost",
+   "development": "Jefferson",
    "quantity": 4,
-   "picture": "picture19.jpg"
+   "picture": ""
  },
  {
    "email": "syncnine@verizon.net",
-   "socialAction": "compost",
-   "development": "JOHNSON",
+   "actionType": "compost",
+   "development": "Johnson",
    "quantity": 5,
-   "picture": "picture20.jpg"
+   "picture": ""
  }
 ]
