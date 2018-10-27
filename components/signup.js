@@ -80,9 +80,7 @@ export default class SignUp extends React.Component {
           </Item>
           {!this.state.email.includes('@' && '.') &&
           this.state.email.length > 0 ? (
-            <Text style={styles.errorMessage}>
-              Please enter a valid email address
-            </Text>
+            <Text>Please enter a valid email address</Text>
           ) : null}
           <Item floatingLabel>
             <Label>Password</Label>
@@ -96,12 +94,6 @@ export default class SignUp extends React.Component {
               }}
             />
           </Item>
-          {this.state.password.length < 6 && this.state.password.length > 0 ? (
-            <Text style={styles.errorMessage}>
-              Password must be at least 6 characters
-            </Text>
-          ) : null}
-
           <Button
             style={{ marginTop: 10 }}
             full
