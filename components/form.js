@@ -15,7 +15,6 @@ export default class FormPage extends React.Component {
     this.state = {
       action: 'recycl',
       quantity: '',
-      // selectedItem: undefined,
       selected1: 'recycl',
     };
     this.onSubmit = this.onSubmit.bind(this);
@@ -47,13 +46,8 @@ export default class FormPage extends React.Component {
       .set(postData);
   }
 
-  // async createObj(){
-  //   await db.collection('action').doc().set(this.state)
-  // }
-
   render() {
     return (
-      //<View style = {{paddingTop = 300}}
       <View
         style={{
           alignItems: 'center',
@@ -87,7 +81,6 @@ export default class FormPage extends React.Component {
         </Picker>
         <FormLabel> Quantity </FormLabel>{' '}
         <FormInput
-          // style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
           onChangeText={quantity =>
             this.setState({
               quantity,
