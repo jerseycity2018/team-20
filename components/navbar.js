@@ -51,6 +51,19 @@ export default class Navbar extends React.Component {
                 style={{ width: 50, height: 50 }}
               />
             </Button>
+            <Button
+              onPress={() => {
+                this.props.navigation.navigate('CalendarView');
+              }}
+            >
+              <Image
+                source={{
+                  uri:
+                    'https://image.freepik.com/free-icon/hanging-calendar-interface-tool-symbol_318-58238.jpg',
+                }}
+                style={{ width: 50, height: 50 }}
+              />
+            </Button>
           </FooterTab>
         </Footer>
       </View>
