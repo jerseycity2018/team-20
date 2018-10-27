@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'react-native';
-import { Text, View } from 'react-native';
+import { Button, Text, View, Picker, TextInput } from 'react-native';
 
 export default class FormPage extends React.Component {
   constructor() {
@@ -32,7 +31,7 @@ export default class FormPage extends React.Component {
           value={this.state.Quantity}
         />
         <Button
-          onPress={onPressSubmit}
+          // onPress={onPressSubmit}
           title="Submit"
           color=""
           accessibilityLabel="Submit Form"
