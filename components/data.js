@@ -26,10 +26,9 @@ export default class Data extends React.Component {
 
   async getPosts() {
     console.log('hi');
-    const allThePosts = await db
-      .collection('action')
-      .orderBy('actionType')
-      .equalTo(this.state.actionVal);
+    const allThePosts = await db.collection('action');
+    // .orderBy('actionType')
+    // .equalTo(this.state.actionVal);
     const arr = [];
     await allThePosts.get().then(docsArr => {
       docsArr.forEach(doc => {
