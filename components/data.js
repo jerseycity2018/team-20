@@ -1,6 +1,11 @@
 import React from 'react';
 import { View, Text, Dimensions } from 'react-native';
-import { PieChart } from 'react-native-chart-kit';
+import {
+  PieChart,
+  LineChart,
+  ProgressChart,
+  BarChart,
+} from 'react-native-chart-kit';
 const screenWidth = Dimensions.get('window').width;
 
 export default class Data extends React.Component {
@@ -54,6 +59,12 @@ export default class Data extends React.Component {
     return (
       <View>
         <Text>Data Analytics</Text>
+        {/* <LineChart
+          data={data}
+          width={screenWidth}
+          height={220}
+          chartConfig={chartConfig}
+        /> */}
         <PieChart
           width={screenWidth}
           data={data}
@@ -63,6 +74,19 @@ export default class Data extends React.Component {
           backgroundColor="transparent"
           paddingLeft="15"
         />
+        {/* <ProgressChart
+          data={data}
+          width={screenWidth}
+          height={220}
+          chartConfig={chartConfig}
+        /> */}
+        {/* <BarChart
+          style={graphStyle}
+          data={data}
+          width={screenWidth}
+          height={220}
+          chartConfig={chartConfig}
+        /> */}
       </View>
     );
   }

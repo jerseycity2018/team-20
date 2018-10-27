@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   font: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: 25,
   },
   info: {
     backgroundColor: '#C0C0C0',
