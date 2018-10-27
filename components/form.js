@@ -48,7 +48,7 @@ export default class FormPage extends React.Component {
     var postData = {
       actionType: this.state.action,
       date: new Date(),
-      development: "this.state.development",
+      development: this.state.development,
       email: "this.state.quantity",
       picture: "",
       quantity: this.state.quantity
@@ -78,6 +78,19 @@ render() {
         paddingBottom: 250,
       }
     } >
+    <
+    FormLabel > Housing Complex < /FormLabel> <
+    FormInput
+    // style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+    onChangeText = {
+      development => this.setState({
+        development
+      })
+    }
+    value = {
+      this.state.development
+    }
+    />
     <
     FormLabel > Pick Action < /FormLabel> <
     Picker selectedValue = {
