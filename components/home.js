@@ -4,15 +4,17 @@ import { StyleSheet, View, Text, Button, Image } from 'react-native';
 export default class Home extends React.Component {
   render() {
     return (
-      <View>
-        <Image
-          style={styles.image}
-          source={{
-            uri:
-              'https://pbs.twimg.com/profile_images/935880969470533632/KprX4QLZ_400x400.jpg',
-          }}
-        />
-        <View styles={styles.buttonContainer}>
+      <View style={{ backgroundColor: 'white' }}>
+        <View style={styles.image}>
+          <Image
+            style={styles.imageSize}
+            source={{
+              uri:
+                'https://pbs.twimg.com/profile_images/935880969470533632/KprX4QLZ_400x400.jpg',
+            }}
+          />
+        </View>
+        <View style={styles.buttonContainer}>
           <Button
             onPress={() => this.props.navigation.navigate('LogIn')}
             title="Log In"
@@ -37,11 +39,16 @@ export default class Home extends React.Component {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    marginTop: 100,
+    paddingTop: 50,
+    paddingBottom: 500,
     backgroundColor: 'white',
   },
+  imageSize: {
+    width: 200,
+    height: 200,
+  },
   image: {
-    width: 100,
-    height: 100,
+    alignItems: 'center',
+    paddingTop: 100,
   },
 });
