@@ -1,0 +1,142 @@
+[
+ {
+   "email": "madanm@me.com",
+   "socialAction": "recycle",
+   "development": "ADAMS",
+   "quantity": 1,
+   "picture": "picture1.jpg"
+ },
+ {
+   "email": "burniske@gmail.com",
+   "socialAction": "recycle",
+   "development": "AMSTERDAM",
+   "quantity": 2,
+   "picture": "picture2.jpg"
+ },
+ {
+   "email": "preneel@sbcglobal.net",
+   "socialAction": "recycle",
+   "development": "AUDUBON",
+   "quantity": 65,
+   "picture": "picture3.jpg"
+ },
+ {
+   "email": "offthelip@msn.com",
+   "socialAction": "recycle",
+   "development": "ALBANY",
+   "quantity": 8,
+   "picture": "picture4.jpg"
+ },
+ {
+   "email": "dawnsong@yahoo.com",
+   "socialAction": "recycle",
+   "development": "ALBANY II",
+   "quantity": 100,
+   "picture": "picture5.jpg"
+ },
+ {
+   "email": "liedra@msn.com",
+   "socialAction": "recycle",
+   "development": "ALLEN STREET",
+   "quantity": 24,
+   "picture": "picture6.jpg"
+ },
+ {
+   "email": "rbarreira@gmail.com",
+   "socialAction": "volunteer",
+   "development": "AMSTRONG II",
+   "quantity": 54,
+   "picture": "picture7.jpg"
+ },
+ {
+   "email": "ccohen@icloud.com",
+   "socialAction": "volunteer",
+   "development": "AMSTERDAM ADDITION",
+   "quantity": 67,
+   "picture": "picture8.jpg"
+ },
+ {
+   "email": "pereinar@gmail.com",
+   "socialAction": "volunteer",
+   "development": "ARMSTRONG I",
+   "quantity": 43,
+   "picture": "picture9.jpg"
+ },
+ {
+   "email": "grinder@comcast.net",
+   "socialAction": "volunteer",
+   "development": "ASTORIA",
+   "quantity": 21,
+   "picture": "picture10.jpg"
+ },
+ {
+   "email": "grolschie@me.com",
+   "socialAction": "volunteer",
+   "development": "BARUCH",
+   "quantity": 54,
+   "picture": "picture11.jpg"
+ },
+ {
+   "email": "giafly@outlook.com",
+   "socialAction": "volunteer",
+   "development": "BAY VIEW",
+   "quantity": 79,
+   "picture": "picture12.jpg"
+ },
+ {
+   "email": "speeves@verizon.net",
+   "socialAction": "volunteer",
+   "development": "BAYCHESTER",
+   "quantity": 909,
+   "picture": "picture13.jpg"
+ },
+ {
+   "email": "slaff@live.com",
+   "socialAction": "volunteer",
+   "development": "FOREST",
+   "quantity": 97,
+   "picture": "picture14.jpg"
+ },
+ {
+   "email": "pajas@outlook.com",
+   "socialAction": "compost",
+   "development": "ASTORIA",
+   "quantity": 62,
+   "picture": "picture15.jpg"
+ },
+ {
+   "email": "scato@sbcglobal.net",
+   "socialAction": "compost",
+   "development": "HOPE GARDENS",
+   "quantity": 34,
+   "picture": "picture16.jpg"
+ },
+ {
+   "email": "gerlo@live.com",
+   "socialAction": "compost",
+   "development": "INGERSOLL",
+   "quantity": 1,
+   "picture": "picture17.jpg"
+ },
+ {
+   "email": "roamer@icloud.com",
+   "socialAction": "compost",
+   "development": "JACKSON",
+   "quantity": 2,
+   "picture": "picture18.jpg"
+ },
+ {
+   "email": "lukka@comcast.net",
+   "socialAction": "compost",
+   "development": "JEFFERSON",
+   "quantity": 4,
+   "picture": "picture19.jpg"
+ },
+ {
+   "email": "syncnine@verizon.net",
+   "socialAction": "compost",
+   "development": "JOHNSON",
+   "quantity": 5,
+   "picture": "picture20.jpg"
+ }
+]
