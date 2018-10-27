@@ -1,4 +1,8 @@
 import React from 'react';
+import { Container, Form, Item, Label, Input, Button } from 'native-base';
+import { Text } from 'react-native';
+const firebase = require('firebase');
+import db from '../firestore';
 
 export default class SignUp extends React.Component {
   constructor() {
@@ -46,12 +50,21 @@ export default class SignUp extends React.Component {
             />
           </Item>
           <Item floatingLabel>
-            <Label>Username</Label>
+            <Label>Last Name</Label>
             <Input
               autoCorrect={false}
               autoCapitalize="none"
               clearButtonMode="always"
               onChangeText={lastName => this.setState({ lastName })}
+            />
+          </Item>
+          <Item floatingLabel>
+            <Label>Development</Label>
+            <Input
+              autoCorrect={false}
+              autoCapitalize="none"
+              clearButtonMode="always"
+              onChangeText={development => this.setState({ development })}
             />
           </Item>
           <Item floatingLabel>
@@ -99,12 +112,10 @@ export default class SignUp extends React.Component {
                 this.state.email,
                 this.state.password
               );
-              this.createUser(id).then(() =>
-                navigation.navigate('EmojiPicker')
-              );
+              this.createUser(id).then(() => navigation.navigate('Feed'));
             }}
           >
-            <Text style={{ color: 'white' }}>Pick Your Icon</Text>
+            <Text style={{ color: 'white' }}>Sign Up</Text>
           </Button>
         </Form>
       </Container>
