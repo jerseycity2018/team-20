@@ -19,9 +19,13 @@ export default class Data extends React.Component {
       top5: [],
     };
     //    this.allPosts = this.allPosts.bind(this);
+    this.getPosts = this.getPosts.bind(this);
+    this.alphabetizeByDev = this.alphabetizeByDev.bind(this);
+    this.getTop5 = this.getTop5.bind(this);
   }
 
   async getPosts() {
+    console.log('hi');
     const allThePosts = await db
       .collection('action')
       .orderBy('actionType')
