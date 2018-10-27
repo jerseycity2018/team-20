@@ -23,7 +23,7 @@ export default class Home extends React.Component {
             onPress={() => this.props.navigation.navigate('SignUp')}
             title="Sign Up"
           />
-          <Button
+          {/* <Button
             onPress={() => this.props.navigation.navigate('Form')}
             title="Form"
           />
@@ -34,6 +34,10 @@ export default class Home extends React.Component {
           <Button
             onPress={() => this.props.navigation.navigate('Data')}
             title="Data"
+          /> */}
+          <Button
+            onPress={() => this.props.navigation.navigate('CalendarView')}
+            title="Calendar"
           />
         </View>
       </View>
