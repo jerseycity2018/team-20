@@ -48,7 +48,6 @@ export default class FormPage extends React.Component {
 
   render() {
     return (
-      //<View style = {{paddingTop = 300}}
       <View
         style={{
           alignItems: 'center',
