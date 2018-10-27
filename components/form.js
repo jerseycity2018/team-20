@@ -37,7 +37,7 @@ export default class FormPage extends React.Component {
         style={{
           alignItems: 'center',
           backgroundColor: 'white',
-          paddingTop: 325,
+          paddingTop: 324,
           paddingBottom: 250,
         }}
       >
