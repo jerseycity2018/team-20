@@ -42,12 +42,12 @@ export default class Feed extends React.Component {
               return (
                 <View style={styles.info} key={post.email}>
                   <Text style={styles.font}>{post.actionType}</Text>
-                  <Text style={styles.font}>{post.development}</Text>
                   <Text style={styles.font}>{post.quantity}</Text>
                   <Image
                     style={{ width: 200, height: 200 }}
                     source={{ uri: post.picture }}
                   />
+                  <Text style={styles.font}>{post.development}</Text>
                 </View>
               );
             })
