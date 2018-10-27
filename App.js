@@ -1,5 +1,41 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Data from "./components/data"
+import Feed from "./components/feed"
+import Form from "./components/form"
+import Login from "./components/login"
+
+const RootNavigator = createStackNavigator({
+
+   Main: {
+    screen: Home,
+    navigationOptions: {
+      headerTitle: "Main"
+    }
+  },
+   Data: {
+    screen: Data,
+    navigationOptions: {
+      headerTitle: "Data"
+    }
+  },
+   Feed: {
+    screen: Feed,
+    navigationOptions: {
+      headerTitle: "Feed"
+    }
+  },
+   Form: {
+    screen: Form,
+    navigationOptions: {
+      headerTitle: "Form"
+    },
+     Login: {
+      screen: Login,
+      navigationOptions: {
+        headerTitle: "Login"
+      },
+    )};
 
 export default class App extends React.Component {
   render() {
