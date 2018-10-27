@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button, Image } from 'react-native';
+import { StyleSheet, View, Text, Image } from 'react-native';
+import { Button } from 'native-base';
 
 export default class Home extends React.Component {
   render() {
@@ -16,13 +17,21 @@ export default class Home extends React.Component {
         </View>
         <View style={styles.buttonContainer}>
           <Button
+            full
+            light
             onPress={() => this.props.navigation.navigate('LogIn')}
             title="Log In"
-          />
+          >
+            <Text>Log In</Text>
+          </Button>
           <Button
+            full
+            light
             onPress={() => this.props.navigation.navigate('SignUp')}
             title="Sign Up"
-          />
+          >
+            <Text>Sign Up</Text>
+          </Button>
           {/* <Button
             onPress={() => this.props.navigation.navigate('Form')}
             title="Form"
@@ -30,12 +39,12 @@ export default class Home extends React.Component {
           <Button
             onPress={() => this.props.navigation.navigate('Feed')}
             title="Feed"
-          />
-          <Button
-            onPress={() => this.props.navigation.navigate('Data')}
-            title="Data"
           /> */}
           {/* <Button
+            onPress={() => this.props.navigation.navigate('Data')}
+            title="Data"
+          />
+          <Button
             onPress={() => this.props.navigation.navigate('CalendarView')}
             title="Calendar"
           /> */}
@@ -47,7 +56,7 @@ export default class Home extends React.Component {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    paddingTop: 50,
+    paddingTop: 75,
     paddingBottom: 500,
     backgroundColor: 'white',
   },
