@@ -31,14 +31,6 @@ export default class Feed extends React.Component {
     const allPosts = this.state.allPosts;
     return (
       <View>
-        {/* <Text>Feed</Text>
-        <Image
-          style={{ width: 66, height: 58 }}
-          source={{
-            uri:
-              'https://images-na.ssl-images-amazon.com/images/I/71WGWTtJfIL._SX425_.jpg',
-          }}
-        /> */}
         <ScrollView>
           {allPosts.length === 0 ? (
             <View>
@@ -47,8 +39,12 @@ export default class Feed extends React.Component {
           ) : (
             allPosts.map(post => {
               return (
-                <View>
+                <View key={post.email}>
                   <Text>{post.actionType}</Text>
+                  <Text>{post.development}</Text>
+                  <Text>{post.quantity}</Text>
+                  {/* <Text>{post.picture}</Text> */}
+                  {/* <Text>{post.date.Date}</Text> */}
                 </View>
               );
             })
