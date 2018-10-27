@@ -69,7 +69,11 @@ export default class Feed extends React.Component {
                     />
                   </TouchableOpacity>
                   <Text style={styles.font}>{post.development}</Text>
-                  <Text style={styles.font}>{post.quantity}</Text>
+                  {post.actionType === 'volunteer' ? (
+                    <Text style={styles.font}>{post.quantity} hours</Text>
+                  ) : (
+                    <Text style={styles.font}>{post.quantity} bags</Text>
+                  )}
                 </View>
               );
             })
