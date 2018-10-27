@@ -23,7 +23,6 @@ export default class FormPage extends React.Component {
   constructor() {
 
     super();
-    console.log('XXXX'+db);
 
     this.state = {
       action: 'recycl',
