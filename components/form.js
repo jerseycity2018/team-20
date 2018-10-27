@@ -7,7 +7,7 @@ import {
 } from 'react-native-elements';
 import db from '../firestore';
 import { Container, Content, Picker } from 'native-base';
-
+import { firebase } from '../firestore'
 export default class FormPage extends React.Component {
   constructor() {
     super();
@@ -32,11 +32,12 @@ export default class FormPage extends React.Component {
   };
 
   onSubmit() {
+    var user =firebase.auth().currentUser;
     var postData = {
       actionType: this.state.action,
       date: new Date(),
       development: this.state.development,
-      email: 'this.state.quantity',
+      email: user.email,
       picture: '',
       quantity: this.state.quantity,
       //createObj;
@@ -106,4 +107,3 @@ export default class FormPage extends React.Component {
     );
   }
 }
-
