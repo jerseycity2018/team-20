@@ -10,6 +10,7 @@ export default class FormPage extends React.Component {
     };
     this.onSubmit = this.onSubmit.bind(this);
   }
+
   updateAction = newAction => {
     this.setState({ action: newAction });
   };
@@ -18,8 +19,12 @@ export default class FormPage extends React.Component {
   };
 
   onSubmit() {
-    console.log('Action is: ' + this.state.action);
-    console.log('Quantity is: ' + this.state.quantity);
+    db.collection("Action")
+      .add(this.state)
+      .then(ref => {
+        console.log('Action is: ' + this.state.action);
+        console.log('Quantity is: ' + this.state.quantity);
+      })
   }
 
   render() {
