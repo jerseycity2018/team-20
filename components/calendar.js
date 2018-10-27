@@ -16,14 +16,37 @@ export default class CalendarView extends React.Component {
           onDayPress={this.onDayPress}
           style={styles.calendar}
           hideExtraDays
+          // markedDates={{
+          //   [this.state.selected]: {
+          //     selected: true,
+          //     disableTouchEvent: true,
+          //     selectedDotColor: 'orange',
+          //   },
+          // }}
           markedDates={{
-            [this.state.selected]: {
-              selected: true,
-              disableTouchEvent: true,
-              selectedDotColor: 'orange',
-            },
+            '2018-10-27': { selected: true, marked: true },
+            '2018-10-18': { selected: true, marked: true, dotColor: 'green' },
+            '2018-10-20': { marked: true, dotColor: 'red' },
+            '2018-10-20': { marked: true },
+            '2012-05-27': { disabled: true, activeOpacity: 0 },
           }}
         />
+        {/* <Calendar
+          style={styles.calendar}
+          current={'2012-05-16'}
+          minDate={'2012-05-10'}
+          maxDate={'2012-05-29'}
+          firstDay={1}
+          markedDates={{
+            '2012-05-23': { selected: true, marked: true },
+            '2012-05-24': { selected: true, marked: true, dotColor: 'green' },
+            '2012-05-25': { marked: true, dotColor: 'red' },
+            '2012-05-26': { marked: true },
+            '2012-05-27': { disabled: true, activeOpacity: 0 },
+          }}
+          // disabledByDefault={true}
+          hideArrows={true}
+        /> */}
       </View>
     );
   }
