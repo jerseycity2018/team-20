@@ -1,51 +1,54 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Data from "./components/data"
-import Feed from "./components/feed"
-import Form from "./components/form"
-import Login from "./components/login"
+import { StyleSheet, Text, View, Button } from 'react-native';
+import Data from './components/data';
+import Feed from './components/feed';
+import Form from './components/form';
+import Login from './components/login';
+import Home from './components/home';
 
 const RootNavigator = createStackNavigator({
-
-   Main: {
+  Main: {
     screen: Home,
     navigationOptions: {
-      headerTitle: "Main"
-    }
+      headerTitle: 'Main',
+    },
   },
-   Data: {
+
+  Data: {
     screen: Data,
     navigationOptions: {
-      headerTitle: "Data"
-    }
+      headerTitle: 'Data',
+    },
   },
-   Feed: {
+
+  Feed: {
     screen: Feed,
     navigationOptions: {
-      headerTitle: "Feed"
-    }
+      headerTitle: 'Feed',
+    },
   },
-   Form: {
+
+  Form: {
     screen: Form,
     navigationOptions: {
-      headerTitle: "Form"
+      headerTitle: 'Form',
     },
-     Login: {
-      screen: Login,
-      navigationOptions: {
-        headerTitle: "Login"
-      },
-    )};
+  },
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your</Text>
-      </View>
-    );
-  }
-}
+  LogIn: {
+    screen: LogIn,
+    navigationOptions: {
+      headerTitle: 'Log In',
+    },
+  },
+
+  SignUp: {
+    screen: SignUp,
+    navigationOptions: {
+      headerTitle: 'Sign Up',
+    },
+  },
+});
 
 const styles = StyleSheet.create({
   container: {
