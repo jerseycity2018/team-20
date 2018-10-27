@@ -24,6 +24,7 @@ export default class FormPage extends React.Component {
       .then(ref => {
         console.log('Action is: ' + this.state.action);
         console.log('Quantity is: ' + this.state.quantity);
+        console.log("");
       })
   }
 
