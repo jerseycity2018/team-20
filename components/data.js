@@ -49,14 +49,14 @@ export default class Data extends React.Component {
       if(temp==doc.development){
         count += doc.quantity;
       }else{
-        sum.push({sum: count, dev: temp});
+        sums.push({sum: count, dev: temp});
         temp = doc.development;
         count = doc.quantity;
       }
     })
-    sum.sort(function(a,b){return b.sum-a.sum});
+    sums.sort(function(a,b){return b.sum-a.sum});
     for (var i = 0; i < 5; i++) {
-       five.push(sum[i]);
+       five.push(sums[i]);
     }
     this.setState({top5: five});
   }
