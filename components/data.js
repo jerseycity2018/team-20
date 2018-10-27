@@ -15,50 +15,59 @@ export default class Data extends React.Component {
     super();
     this.state = {
       allPosts: [],
-      actionVal = "volunteer",
+      actionVal: 'volunteer',
       top5: [],
     };
-//    this.allPosts = this.allPosts.bind(this);
+    //    this.allPosts = this.allPosts.bind(this);
   }
 
   async getPosts() {
-    const allThePosts = await db.collection('action').orderBy('actionType').equalTo(this.state.actionVal);
+    const allThePosts = await db
+      .collection('action')
+      .orderBy('actionType')
+      .equalTo(this.state.actionVal);
     const arr = [];
     await allThePosts.get().then(docsArr => {
       docsArr.forEach(doc => {
         arr.push(doc.data());
       });
     });
-    this.setState({allPosts: arr });
+    this.setState({ allPosts: arr });
   }
 
-  async alphabetizeByDev(){
-    this.state.allPosts.sort(function(a,b){
-      if(a.development < b.development) {return -1;}
-      if(a.development > b.development) {return 1;}
+  async alphabetizeByDev() {
+    this.state.allPosts.sort(function(a, b) {
+      if (a.development < b.development) {
+        return -1;
+      }
+      if (a.development > b.development) {
+        return 1;
+      }
       return 0;
-    })
+    });
   }
 
-  async getTop5(){
+  async getTop5() {
     var sums = [];
     var temp = this.state.allPosts[0].development;
     var count = 0;
     var five = [];
     this.state.allPosts.forEach(doc => {
-      if(temp==doc.development){
+      if (temp == doc.development) {
         count += doc.quantity;
-      }else{
-        sum.push({sum: count, dev: temp});
+      } else {
+        sum.push({ sum: count, dev: temp });
         temp = doc.development;
         count = doc.quantity;
       }
-    })
-    sum.sort(function(a,b){return b.sum-a.sum});
+    });
+    sum.sort(function(a, b) {
+      return b.sum - a.sum;
+    });
     for (var i = 0; i < 5; i++) {
-       five.push(sum[i]);
+      five.push(sum[i]);
     }
-    this.setState({top5: five});
+    this.setState({ top5: five });
   }
 
   render() {
@@ -106,7 +115,7 @@ export default class Data extends React.Component {
       },
     ];
 
-    return(
+    return (
       <View>
         <Text>Data Analytics </Text>
         <PieChart
@@ -116,8 +125,8 @@ export default class Data extends React.Component {
           chartConfig={chartConfig}
           accessor="quantity"
           backgroundColor="transparent"
-          paddingLeft="15"/>
-
+          paddingLeft="15"
+        />
       </View>
     );
   }
