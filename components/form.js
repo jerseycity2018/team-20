@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { Button, Text, View, Picker, TextInput } from 'react-native';
+import { Button, Text, View, TextInput } from 'react-native';
+import {
+  FormLabel,
+  FormInput,
+  FormValidationMessage,
+} from 'react-native-elements';
+import { Container, Content, Picker } from 'native-base';
 
 export default class FormPage extends React.Component {
   constructor() {
@@ -7,6 +13,8 @@ export default class FormPage extends React.Component {
     this.state = {
       action: '',
       quantity: '',
+      // selectedItem: undefined,
+      // selected1: 'key1',
     };
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -22,16 +30,23 @@ export default class FormPage extends React.Component {
     console.log('Quantity is: ' + this.state.quantity);
   }
 
+  // onValueChange(value) {
+  //   this.setState({
+  //     selected1: value,
+  //   });
+  // }
+
   render() {
     return (
       <View
         style={{
-          flex: 1,
-          flexDirection: 'column',
+          // flex: 1,
+          // flexDirection: 'column',
+          // paddingLeft: 100,
+          backgroundColor: 'white',
         }}
       >
-        <Text>Form</Text>
-
+        <FormLabel>Pick Action</FormLabel>
         <Picker
           selectedValue={this.state.action}
           style={{ height: 50, width: 100 }}
@@ -41,9 +56,10 @@ export default class FormPage extends React.Component {
           <Picker.Item label="Donated Compost" value="donate" />
           <Picker.Item label="Volunteer" value="volunteer" />
         </Picker>
-        <Text>Quantity</Text>
-        <TextInput
-          style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+
+        <FormLabel>Quantity</FormLabel>
+        <FormInput
+          // style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
           onChangeText={quantity => this.setState({ quantity })}
           value={this.state.quantity}
         />

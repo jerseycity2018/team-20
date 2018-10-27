@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Image, ScrollView } from 'react-native';
+import styles from './styleSheet';
 
 import db from '../firestore';
 
@@ -30,7 +31,7 @@ export default class Feed extends React.Component {
   render() {
     const allPosts = this.state.allPosts;
     return (
-      <View>
+      <View style={{ backgroundColor: 'white' }}>
         <ScrollView>
           {allPosts.length === 0 ? (
             <View>
@@ -39,12 +40,14 @@ export default class Feed extends React.Component {
           ) : (
             allPosts.map(post => {
               return (
-                <View key={post.email}>
+                <View styles={styles.feedContainer} key={post.email}>
                   <Text>{post.actionType}</Text>
                   <Text>{post.development}</Text>
                   <Text>{post.quantity}</Text>
-                  {/* <Text>{post.picture}</Text> */}
-                  {/* <Text>{post.date.Date}</Text> */}
+                  <Image
+                    style={{ width: 200, height: 200 }}
+                    source={{ uri: post.picture }}
+                  />
                 </View>
               );
             })
