@@ -9,34 +9,44 @@ export default class FormPage extends React.Component {
       quantity: '',
     };
   }
+  updateAction = (newAction) => {
+    this.setState({action: newAction})
+  }
+  updateQuantity = (newQuantity) => {
+    this.setState({quantity: newQuantity})
+  }
   render() {
     return (
-      <View style={{ alignItems: 'center' }}>
-        <Text>Form</Text>
-        <Picker
-          selectedValue={this.state.action}
-          style={{ height: 50, width: 100 }}
-          onValueChange={(itemValue, itemIndex) =>
-            this.setState({ language: itemValue })
-          }
-        >
+      <View style={{
+        flex: 1,
+        flexDirection: 'column',
+      }}>
+
+      <Text>Form</Text>
+
+      <Picker selectedValue={this.state.action} style={{ height: 50, width: 100 }} onValueChange={this.updateAction}>
           <Picker.Item label="Recycle" value="recycle" />
           <Picker.Item label="Donated Compost" value="donate" />
           <Picker.Item label="Volunteer" value="volunteer" />
-        </Picker>
-        <Text>Quantity</Text>{' '}
+      </Picker>
+        <Text>Quantity</Text>
         <TextInput
           style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-          onChangeText={Quantity => this.setState({ Quantity })}
-          value={this.state.Quantity}
+          onChangeText={quantity => this.setState({quantity})}
+          value={this.state.quantity}
         />
         <Button
-          // onPress={onPressSubmit}
+          onPress={this.handleLogin}
           title="Submit"
           color=""
           accessibilityLabel="Submit Form"
         />
       </View>
     );
+  }
+
+  handleLogin: function(){
+    console.log("Action is: " + this.state.action);
+    console.log("Quantity is: " + this.state.quantity);
   }
 }
