@@ -40,7 +40,6 @@ export default class FormPage extends React.Component {
       email: user.email,
       picture: '',
       quantity: this.state.quantity,
-      //createObj;
     };
     var newPostKey = db
       .collection('action')
