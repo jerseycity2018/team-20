@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import styles from './styleSheet';
+import Navbar from './navbar';
 
 import db from '../firestore';
 
@@ -79,6 +80,7 @@ export default class Feed extends React.Component {
             })
           )}
         </ScrollView>
+        <Navbar navigation={this.props.navigation} />
       </View>
     );
   }
