@@ -62,7 +62,8 @@ export default class Data extends React.Component {
   }
 */
   render() {
-    const chartConfig = {
+    screenWidth = Dimensions.get('window').width
+    chartConfig = {
       backgroundGradientFrom: '#1E2923',
       backgroundGradientTo: '#08130D',
       color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
@@ -105,10 +106,71 @@ export default class Data extends React.Component {
         legendFontSize: 15,
       },
     ];
+    data2 = {
+        labels: ['Baruch', 'Adams', 'Armstrong I', 'Albany II', 'Jefferson'],
+        datasets: [{
+          data: [ 40, 85, 32, 77, 23]
+        }]
+    }
+
+    data3 = [
+      {
+        name: 'Allen Street',
+        quantity: 29,
+        color: '#721825',
+        legendFontColor: '#7F7F7F',
+        legendFontSize: 15,
+      },
+      {
+        name: 'Albany II',
+        quantity: 107,
+        color: '#5b0952',
+        legendFontColor: '#7F7F7F',
+        legendFontSize: 15,
+      },
+      {
+        name: 'Ingersoll',
+        quantity: 49,
+        color: '#342770',
+        legendFontColor: '#7F7F7F',
+        legendFontSize: 15,
+      },
+      {
+        name: 'Astoria',
+        quantity: 87,
+        color: '#41989b',
+        legendFontColor: '#7F7F7F',
+        legendFontSize: 15,
+      },
+      {
+        name: 'Armstrong II',
+        quantity: 19,
+        color: '#274736',
+        legendFontColor: '#7F7F7F',
+        legendFontSize: 15,
+      },
+    ];
 
     return(
       <View>
         <Text>Data Analytics </Text>
+        <PieChart
+          width={screenWidth}
+          data={data}
+          height={200}
+          chartConfig={chartConfig}
+          accessor="quantity"
+          backgroundColor="transparent"
+          paddingLeft="15"/>
+
+        <BarChart
+          style={graphStyle}
+          data={data2}
+          width={screenWidth}
+          height={200}
+          chartConfig={chartConfig}
+        />
+
         <PieChart
           width={screenWidth}
           data={data}
