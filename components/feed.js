@@ -1,5 +1,12 @@
 import React from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  Button,
+  TouchableOpacity,
+} from 'react-native';
 import styles from './styleSheet';
 
 import db from '../firestore';
@@ -41,13 +48,28 @@ export default class Feed extends React.Component {
             allPosts.map(post => {
               return (
                 <View style={styles.info} key={post.email}>
-                  <Text style={styles.font}>{post.actionType}</Text>
-                  <Text style={styles.font}>{post.quantity}</Text>
+                  <Text style={styles.font}>
+                    I {post.actionType}
+                    ed!
+                  </Text>
                   <Image
                     style={{ width: 200, height: 200 }}
                     source={{ uri: post.picture }}
                   />
+                  <TouchableOpacity
+                    style={{ paddingTop: 10 }}
+                    onPress={() => {}}
+                  >
+                    <Image
+                      style={{ width: 40, height: 40 }}
+                      source={{
+                        uri:
+                          'https://www.inflexxion.com/wp-content/uploads/2018/05/Thumbs-up-icon.png',
+                      }}
+                    />
+                  </TouchableOpacity>
                   <Text style={styles.font}>{post.development}</Text>
+                  <Text style={styles.font}>{post.quantity}</Text>
                 </View>
               );
             })

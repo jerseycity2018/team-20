@@ -35,6 +35,10 @@ export default class Home extends React.Component {
             onPress={() => this.props.navigation.navigate('Data')}
             title="Data"
           />
+          {/* <Button
+            onPress={() => this.props.navigation.navigate('Data')}
+            title="Data"
+          /> */}
         </View>
       </View>
     );
