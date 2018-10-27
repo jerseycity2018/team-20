@@ -15,64 +15,52 @@ export default class Data extends React.Component {
     super();
     this.state = {
       allPosts: [],
-      actionVal: 'volunteer',
+      actionVal: "volunteer",
       top5: [],
     };
-    //    this.allPosts = this.allPosts.bind(this);
-    this.getPosts = this.getPosts.bind(this);
-    this.alphabetizeByDev = this.alphabetizeByDev.bind(this);
-    this.getTop5 = this.getTop5.bind(this);
+//    this.allPosts = this.allPosts.bind(this);
   }
 
-  async getPosts() {
-    console.log('hi');
-    const allThePosts = await db.collection('action');
-    // .orderBy('actionType')
-    // .equalTo(this.state.actionVal);
+/*  async getPosts() {
+    const allThePosts = await db.collection('action').orderBy('actionType').equalTo(this.state.actionVal);
     const arr = [];
     await allThePosts.get().then(docsArr => {
       docsArr.forEach(doc => {
         arr.push(doc.data());
       });
     });
-    this.setState({ allPosts: arr });
+    this.setState({allPosts: arr });
   }
 
-  async alphabetizeByDev() {
-    this.state.allPosts.sort(function(a, b) {
-      if (a.development < b.development) {
-        return -1;
-      }
-      if (a.development > b.development) {
-        return 1;
-      }
+  async alphabetizeByDev(){
+    this.state.allPosts.sort(function(a,b){
+      if(a.development < b.development) {return -1;}
+      if(a.development > b.development) {return 1;}
       return 0;
-    });
+    })
   }
 
-  async getTop5() {
+  async getTop5(){
     var sums = [];
     var temp = this.state.allPosts[0].development;
     var count = 0;
     var five = [];
     this.state.allPosts.forEach(doc => {
-      if (temp == doc.development) {
+      if(temp==doc.development){
         count += doc.quantity;
-      } else {
-        sums.push({ sum: count, dev: temp });
+      }else{
+        sums.push({sum: count, dev: temp});
         temp = doc.development;
         count = doc.quantity;
       }
-    });
-    sums.sort(function(a, b) {
-      return b.sum - a.sum;
-    });
+    })
+    sums.sort(function(a,b){return b.sum-a.sum});
     for (var i = 0; i < 5; i++) {
-      five.push(sums[i]);
+       five.push(sums[i]);
     }
-    this.setState({ top5: five });
+    this.setState({top5: five});
   }
-
+*/
   render() {
     const chartConfig = {
       backgroundGradientFrom: '#1E2923',
@@ -82,43 +70,43 @@ export default class Data extends React.Component {
 
     data = [
       {
-        name: this.state.top5[0].dev,
-        quantity: this.state.top5[0].sum,
-        color: 'rgba(131, 167, 234, 1)',
+        name: 'Baychester',
+        quantity: 129,
+        color: '#8e41f4',
         legendFontColor: '#7F7F7F',
         legendFontSize: 15,
       },
       {
-        name: this.state.top5[1].dev,
-        quantity: this.state.top5[1].sum,
-        color: '#F00',
+        name: 'Forest',
+        quantity: 97,
+        color: '#41f48b',
         legendFontColor: '#7F7F7F',
         legendFontSize: 15,
       },
       {
-        name: this.state.top5[2].dev,
-        quantity: this.state.top5[2].sum,
-        color: 'red',
+        name: 'Bay View',
+        quantity: 79,
+        color: '#f4cd41',
         legendFontColor: '#7F7F7F',
         legendFontSize: 15,
       },
       {
-        name: this.state.top5[3].dev,
-        quantity: this.state.top5[3].sum,
-        color: '#ffffff',
+        name: 'Amsterdan Addition',
+        quantity: 67,
+        color: '#f46b41',
         legendFontColor: '#7F7F7F',
         legendFontSize: 15,
       },
       {
-        name: this.state.top5[4].dev,
-        quantity: this.state.top5[4].sum,
-        color: 'rgb(0, 0, 255)',
+        name: 'Armstrong II',
+        quantity: 79,
+        color: '#4286f4',
         legendFontColor: '#7F7F7F',
         legendFontSize: 15,
       },
     ];
 
-    return (
+    return(
       <View>
         <Text>Data Analytics </Text>
         <PieChart
@@ -128,8 +116,7 @@ export default class Data extends React.Component {
           chartConfig={chartConfig}
           accessor="quantity"
           backgroundColor="transparent"
-          paddingLeft="15"
-        />
+          paddingLeft="15"/>
       </View>
     );
   }
