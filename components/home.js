@@ -14,6 +14,10 @@ export default class Home extends React.Component {
           onPress={() => this.props.navigation.navigate('SignUp')}
           title="Sign Up"
         />
+        <Button
+          onPress={() => this.props.navigation.navigate('Form')}
+          title="Form"
+        />
       </View>
     );
   }
