@@ -1,10 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import { createStackNavigator } from 'react-navigation';
+
 import Data from './components/data';
 import Feed from './components/feed';
 import Form from './components/form';
-import Login from './components/login';
+import LogIn from './components/login';
 import Home from './components/home';
+import SignUp from './components/signup';
 
 const RootNavigator = createStackNavigator({
   Main: {
@@ -50,11 +53,13 @@ const RootNavigator = createStackNavigator({
   },
 });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default RootNavigator;
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+// });
