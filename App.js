@@ -8,7 +8,7 @@ import Form from './components/form';
 import LogIn from './components/login';
 import Home from './components/home';
 import SignUp from './components/signup';
-// import CalendarView from './components/calendar';
+import CalendarView from './components/calendar';
 
 const RootNavigator = createStackNavigator({
   Main: {
@@ -53,12 +53,12 @@ const RootNavigator = createStackNavigator({
     },
   },
 
-  // CalendarView: {
-  //   screen: CalendarView,
-  //   navigationOptions: {
-  //     headerTitle: 'Calendar',
-  //   },
-  // },
+  CalendarView: {
+    screen: CalendarView,
+    navigationOptions: {
+      headerTitle: 'Calendar',
+    },
+  },
 });
 
 export default RootNavigator;
