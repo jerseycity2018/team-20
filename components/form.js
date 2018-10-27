@@ -32,10 +32,13 @@ export default class FormPage extends React.Component {
 
   render() {
     return (
+  //<View style = {{paddingTop = 300}}
       <View
         style={{
           alignItems: 'center',
           backgroundColor: 'white',
+          paddingTop: 325,
+          paddingBottom: 250,
         }}
       >
         <FormLabel>Pick Action</FormLabel>
@@ -62,6 +65,7 @@ export default class FormPage extends React.Component {
           accessibilityLabel="Submit Form"
         />
       </View>
+      //>
     );
   }
 }
