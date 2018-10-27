@@ -13,6 +13,10 @@ export default class Profile extends React.Component {
     this.getUser = this.getUser.bind(this);
   }
 
+  componentDidMount() {
+    this.getUser();
+  }
+
   async getUser() {
     let user = await firebase.auth().currentUser;
     await this.setState({ user: user });
@@ -20,15 +24,15 @@ export default class Profile extends React.Component {
   render() {
     return (
       <View style={{ backgroundColor: 'white' }}>
-        {/* <Image
+        {/* <Text>{this.state.user.email}</Text> */}
+        <Image
           style={styles.imageSize}
           source={{
             uri:
               'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909__340.png',
           }}
-        /> */}
-        <Text>{this.state.user}</Text>
-        {/* <Text>{this.state.user.email}</Text> */}
+        />
+        <Text>{this.state.user.email}</Text>
       </View>
     );
   }
