@@ -64,6 +64,18 @@ export default class Navbar extends React.Component {
                 style={{ width: 50, height: 50 }}
               />
             </Button>
+            <Button
+              onPress={() => {
+                this.props.navigation.navigate('Profile');
+              }}
+            >
+              <Image
+                source={{
+                  uri: 'https://static.thenounproject.com/png/630729-200.png',
+                }}
+                style={{ width: 50, height: 50 }}
+              />
+            </Button>
           </FooterTab>
         </Footer>
       </View>
