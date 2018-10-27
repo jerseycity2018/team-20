@@ -15,13 +15,13 @@ export default class Data extends React.Component {
     super();
     this.state = {
       allPosts: [],
-      actionVal: "volunteer",
+      actionVal: 'volunteer',
       top5: [],
     };
-//    this.allPosts = this.allPosts.bind(this);
+    //    this.allPosts = this.allPosts.bind(this);
   }
 
-/*  async getPosts() {
+  /*  async getPosts() {
     const allThePosts = await db.collection('action').orderBy('actionType').equalTo(this.state.actionVal);
     const arr = [];
     await allThePosts.get().then(docsArr => {
@@ -63,12 +63,12 @@ export default class Data extends React.Component {
 */
   render() {
     //get dimensions of screen
-    screenWidth = Dimensions.get('window').width
+    screenWidth = Dimensions.get('window').width;
     //create standard chart configurations for each
     chartConfig = {
-      backgroundGradientFrom: '#1E2923',
-      backgroundGradientTo: '#08130D',
-      color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
+      backgroundGradientFrom: 'white',
+      backgroundGradientTo: 'white',
+      color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
     };
 
     //ALL PROPERTIES ARE DOCUMENTED UNDER react-native-chart-kit repository
@@ -112,11 +112,13 @@ export default class Data extends React.Component {
     ];
     // data for recycle
     data2 = {
-        labels: ['Baruch', 'Adams', 'Armstrong I', 'Albany II', 'Jefferson'],
-        datasets: [{
-          data: [ 40, 85, 32, 77, 23]
-        }]
-    }
+      labels: ['Baruch', 'Adams', 'Armstrong I', 'Albany II', 'Jefferson'],
+      datasets: [
+        {
+          data: [40, 85, 32, 77, 23],
+        },
+      ],
+    };
 
     // data for volunteer hours
     data3 = [
@@ -157,10 +159,9 @@ export default class Data extends React.Component {
       },
     ];
 
-    return(
+    return (
       <View>
         <Text>Data Analytics </Text>
-
         //Below are pie charts and bar charts to visualize analytical data
         <PieChart
           width={screenWidth}
@@ -168,25 +169,36 @@ export default class Data extends React.Component {
           height={200}
           chartConfig={chartConfig}
           accessor="quantity"
-          backgroundColor="transparent"
-          paddingLeft="15"/>
-
+          backgroundColor="white"
+          paddingLeft="15"
+        />
+        <Text>Recycling</Text>
         <BarChart
-          style={graphStyle}
+          // style={graphStyle}
           data={data2}
           width={screenWidth}
           height={200}
           chartConfig={chartConfig}
         />
-
-        <PieChart
+        {/* <PieChart
           width={screenWidth}
-          data={data}
+          data={data2}
           height={200}
           chartConfig={chartConfig}
           accessor="quantity"
           backgroundColor="transparent"
-          paddingLeft="15"/>
+          paddingLeft="15"
+        /> */}
+        <Text>Volunteer Work</Text>
+        <PieChart
+          width={screenWidth}
+          data={data3}
+          height={200}
+          chartConfig={chartConfig}
+          accessor="quantity"
+          backgroundColor="white"
+          paddingLeft="15"
+        />
       </View>
     );
   }

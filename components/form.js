@@ -101,7 +101,6 @@ export default class FormPage extends React.Component {
           light
           onPress={this.onSubmit}
           title="Submit"
-          // color=""
           accessibilityLabel="Submit Form"
         >
           <Text>Submit</Text>
