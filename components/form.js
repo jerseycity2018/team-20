@@ -11,10 +11,10 @@ export default class FormPage extends React.Component {
   constructor() {
     super();
     this.state = {
-      action: '',
+      action: 'recycle',
       quantity: '',
       // selectedItem: undefined,
-      // selected1: 'key1',
+      selected1: 'recycle',
     };
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -30,19 +30,11 @@ export default class FormPage extends React.Component {
     console.log('Quantity is: ' + this.state.quantity);
   }
 
-  // onValueChange(value) {
-  //   this.setState({
-  //     selected1: value,
-  //   });
-  // }
-
   render() {
     return (
       <View
         style={{
-          // flex: 1,
-          // flexDirection: 'column',
-          // paddingLeft: 100,
+          alignItems: 'center',
           backgroundColor: 'white',
         }}
       >
