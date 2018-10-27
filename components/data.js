@@ -62,13 +62,17 @@ export default class Data extends React.Component {
   }
 */
   render() {
+    //get dimensions of screen
     screenWidth = Dimensions.get('window').width
+    //create standard chart configurations for each
     chartConfig = {
       backgroundGradientFrom: '#1E2923',
       backgroundGradientTo: '#08130D',
       color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
     };
 
+    //ALL PROPERTIES ARE DOCUMENTED UNDER react-native-chart-kit repository
+    //data for compost
     data = [
       {
         name: 'Baychester',
@@ -106,6 +110,7 @@ export default class Data extends React.Component {
         legendFontSize: 15,
       },
     ];
+    // data for recycle
     data2 = {
         labels: ['Baruch', 'Adams', 'Armstrong I', 'Albany II', 'Jefferson'],
         datasets: [{
@@ -113,6 +118,7 @@ export default class Data extends React.Component {
         }]
     }
 
+    // data for volunteer hours
     data3 = [
       {
         name: 'Allen Street',
@@ -154,6 +160,8 @@ export default class Data extends React.Component {
     return(
       <View>
         <Text>Data Analytics </Text>
+
+        //Below are pie charts and bar charts to visualize analytical data
         <PieChart
           width={screenWidth}
           data={data}
