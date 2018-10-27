@@ -15,7 +15,7 @@ export default class Data extends React.Component {
     super();
     this.state = {
       allPosts: [],
-      actionVal = "volunteer",
+      actionVal: "volunteer",
       top5: [],
     };
 //    this.allPosts = this.allPosts.bind(this);
