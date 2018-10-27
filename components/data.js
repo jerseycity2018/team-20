@@ -15,60 +15,50 @@ export default class Data extends React.Component {
     super();
     this.state = {
       allPosts: [],
-      actionVal: 'volunteer',
+      actionVal = "volunteer",
       top5: [],
     };
-    // this.allPosts = this.allPosts.bind(this);
+//    this.allPosts = this.allPosts.bind(this);
   }
 
   async getPosts() {
-    const allThePosts = await db
-      .collection('action')
-      .orderBy('actionType')
-      .equalTo(this.actionVal);
+    const allThePosts = await db.collection('action').orderBy('actionType').equalTo(this.state.actionVal);
     const arr = [];
     await allThePosts.get().then(docsArr => {
       docsArr.forEach(doc => {
         arr.push(doc.data());
       });
     });
-    this.setState({ allPosts: arr });
-    console.log('this.state.allPosts', this.state.allPosts);
+    this.setState({allPosts: arr });
   }
 
-  alphabetizeByDev() {
-    this.allPosts.sort(function(a, b) {
-      if (a.development < b.development) {
-        return -1;
-      }
-      if (a.development > b.development) {
-        return 1;
-      }
+  async alphabetizeByDev(){
+    this.state.allPosts.sort(function(a,b){
+      if(a.development < b.development) {return -1;}
+      if(a.development > b.development) {return 1;}
       return 0;
-    });
+    })
   }
 
-  async getTop5() {
+  async getTop5(){
     var sums = [];
-    var temp = '';
+    var temp = this.state.allPosts[0].development;
     var count = 0;
     var five = [];
-    this.allPosts.forEach(doc => {
-      if (temp == doc.development) {
+    this.state.allPosts.forEach(doc => {
+      if(temp==doc.development){
         count += doc.quantity;
-      } else {
-        sum.push({ sum: count, dev: temp });
+      }else{
+        sum.push({sum: count, dev: temp});
         temp = doc.development;
         count = doc.quantity;
       }
-    });
-    sum.sort(function(a, b) {
-      return b.sum - a.sum;
-    });
+    })
+    sum.sort(function(a,b){return b.sum-a.sum});
     for (var i = 0; i < 5; i++) {
-      five.push(sum[i]);
+       five.push(sum[i]);
     }
-    this.setState({ allPosts: five });
+    this.setState({top5: five});
   }
 
   render() {
@@ -80,42 +70,43 @@ export default class Data extends React.Component {
 
     data = [
       {
-        name: 'a',
-        quantity: 100,
+        name: this.state.top5[0].dev,
+        quantity: this.state.top5[0].sum,
         color: 'rgba(131, 167, 234, 1)',
         legendFontColor: '#7F7F7F',
         legendFontSize: 15,
       },
       {
-        name: 'b',
-        quantity: 200,
+        name: this.state.top5[1].dev,
+        quantity: this.state.top5[1].sum,
         color: '#F00',
         legendFontColor: '#7F7F7F',
         legendFontSize: 15,
       },
       {
-        name: 'c',
-        quantity: 300,
+        name: this.state.top5[2].dev,
+        quantity: this.state.top5[2].sum,
         color: 'red',
         legendFontColor: '#7F7F7F',
         legendFontSize: 15,
       },
       {
-        name: 'd',
-        quantity: 400,
+        name: this.state.top5[3].dev,
+        quantity: this.state.top5[3].sum,
         color: '#ffffff',
         legendFontColor: '#7F7F7F',
         legendFontSize: 15,
       },
       {
-        name: 'e',
-        quantity: 500,
+        name: this.state.top5[4].dev,
+        quantity: this.state.top5[4].sum,
         color: 'rgb(0, 0, 255)',
         legendFontColor: '#7F7F7F',
         legendFontSize: 15,
       },
     ];
-    return (
+
+    return(
       <View>
         <Text>Data Analytics </Text>
         <PieChart
@@ -125,8 +116,8 @@ export default class Data extends React.Component {
           chartConfig={chartConfig}
           accessor="quantity"
           backgroundColor="transparent"
-          paddingLeft="15"
-        />
+          paddingLeft="15"/>
+
       </View>
     );
   }
