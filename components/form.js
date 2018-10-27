@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Button, Text, View, TextInput } from 'react-native';
+import { Text, View, TextInput } from 'react-native';
 import {
   FormLabel,
   FormInput,
   FormValidationMessage,
 } from 'react-native-elements';
 import db from '../firestore';
-import { Container, Content, Picker } from 'native-base';
+import { Container, Content, Picker, Button } from 'native-base';
 
 export default class FormPage extends React.Component {
   constructor() {
@@ -58,8 +58,8 @@ export default class FormPage extends React.Component {
         style={{
           alignItems: 'center',
           backgroundColor: 'white',
-          paddingTop: 324,
-          paddingBottom: 250,
+          paddingTop: 150,
+          paddingBottom: 300,
         }}
       >
         <FormLabel> Housing Complex </FormLabel>{' '}
@@ -95,12 +95,18 @@ export default class FormPage extends React.Component {
           }
           value={this.state.quantity}
         />{' '}
+        {/* <View style={{ paddingTop: 40 }}> */}
         <Button
+          full
+          light
           onPress={this.onSubmit}
           title="Submit"
           // color=""
           accessibilityLabel="Submit Form"
-        />
+        >
+          <Text>Submit</Text>
+        </Button>
+        {/* </View> */}
       </View>
       //>
     );
