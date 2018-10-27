@@ -15,7 +15,6 @@ export default class FormPage extends React.Component {
     this.state = {
       action: 'recycl',
       quantity: '',
-      // selectedItem: undefined,
       selected1: 'recycl',
     };
     this.onSubmit = this.onSubmit.bind(this);
@@ -46,10 +45,6 @@ export default class FormPage extends React.Component {
       .doc()
       .set(postData);
   }
-
-  // async createObj(){
-  //   await db.collection('action').doc().set(this.state)
-  // }
 
   render() {
     return (
