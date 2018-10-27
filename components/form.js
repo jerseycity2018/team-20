@@ -50,7 +50,7 @@ export default class FormPage extends React.Component {
         <Button
           onPress={this.onSubmit}
           title="Submit"
-          color=""
+          // color=""
           accessibilityLabel="Submit Form"
         />
       </View>
