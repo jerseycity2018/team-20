@@ -1,4 +1,4 @@
-const firebase = require('firebase');
+const firebaseLib = require('firebase');
 require('firebase/firestore');
 require('firebase/auth');
 
@@ -11,9 +11,10 @@ var config = {
   messagingSenderId: '825469520540',
 };
 
-firebase.initializeApp(config);
+export const firebase = firebaseLib.initializeApp(config);
 const db = firebase.firestore();
 const settings = { timestampsInSnapshots: true };
 db.settings(settings);
+
 
 export default db;
